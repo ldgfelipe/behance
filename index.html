@@ -13,7 +13,31 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+	FB.init({
+	  xfbml            : true,
+	  version          : 'v7.0'
+	});
+  };
 
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="422373184456426"
+logged_in_greeting="Hola, como puedo ayudarte?"
+logged_out_greeting="Hola, como puedo ayudarte?">
+</div>
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
@@ -165,31 +189,14 @@
 									<a href="./download/CV-LDGFELIPECARRERA.pdf" target="_blank" class="button primary color2">Descargar Mi CV</a>
 								</div>
 								<div class="inner columns divided">
-									<div class="span-3-25">
-										<form method="post" action="sendmail.php">
-											<div class="fields">
-												<div class="field half">
-													<label for="name">Nombre</label>
-													<input type="text" name="name" id="name" />
-												</div>
-												<div class="field half">
-													<label for="email">Email</label>
-													<input type="email" name="email" id="email" />
-												</div>
-												<div class="field">
-													<label for="message">Mensaje</label>
-													<textarea name="message" id="message" rows="4"></textarea>
-												</div>
-											</div>
-											<ul class="actions">
-												<li><input type="submit" value="Enviar" class="button primary" /></li>
-											</ul>
-										</form>
-									</div>
+								
 									<div class="span-1-5">
 										<ul class="contact-icons color1">
 											<li class="icon brands fa-twitter"><a href="https://twitter.com/ldgframe" target="_blank">@ldgframe</a></li>
 											<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/Ldgfelipe/" target="_blank">facebook.com/Ldgfelipe/</a></li>
+											<li class="icon brands fa-mandalorian"><a href="mailto:ldgfelipecarrera@gmail.com" target="_blank">ldgfelipecarrera@gmail.com</a></li>
+											<li class="icon brands fa-whatsapp"><a href=" https://wa.me/2227328662?text=Estoy%20Interesado%20en%20tus%20servicios" target="_blank">2227328662</a></li>
+									
 										</ul>
 									</div>
 								</div>
